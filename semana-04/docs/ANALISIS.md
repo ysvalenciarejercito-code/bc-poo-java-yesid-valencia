@@ -1,28 +1,24 @@
-## 📝 3. Estructura del `ANALISIS.md` Semanal (`semana-XX/docs/ANALISIS.md`)
+# Actividad 4: Múltiples Objetos
 
-Este es el documento donde explicas tu diseño de POO. **Recuerda que este contenido debe cambiar totalmente cada semana** para reflejar el nuevo problema.
+##  Objetivo de la Actividad
+Demostrar el uso de la **plantilla** clase (`Event`) creado en la actividad anterior para construir cinco objetos reales, verificando que cada uno funciona con sus propios datos.
 
-```markdown
-# Análisis del Dominio: [Tu Dominio]
 
-## 1. Identificación de Objetos
+## 1. El Proceso de Construcción (Instanciación)
 
-### Objeto Principal: [Nombre de la Clase Principal, e.g., Reserva]
-- **Justificación:** [Explicar por qué es la entidad central del problema (Dominio)]
-- **Atributos identificados:** [Listar los atributos privados necesarios y su tipo, e.g., `private String codigoReserva;`]
-- **Comportamientos:** [Listar los métodos públicos, e.g., `public void mostrarInformacion()`, `public double calcularPrecio()`]
+* La instanciacion es el proceso de utilizar la plantilla creada por una clase que contiene sus atributos (variables) y comportamientos (metodos) para la creacion de una instancia u objeto. 
+* En el Código (`Main.java`): Usamos la palabra **`new`** para llamar al constructor de la clase y crear cinco Eventos distintos. Por ejemplo, `Event boda = new Event(...)`.
 
-### Objeto Secundario: [Nombre de la Clase Secundaria, e.g., Cliente]
-- **Justificación:** [Explicar su rol de soporte o relación con el objeto principal]
-- **Relación con objeto principal:** [Describir cómo se relacionan (Asociación, Composición o Agregación) e.g., "Una `Reserva` está asociada a un `Cliente`."]
+## 2. La Necesidad de Cinco Eventos
 
-## 2. Diagrama de Clases (opcional)
-[Insertar diagrama UML de clases o una descripción textual clara de la herencia/relaciones]
+La empresa "Celebraciones Especiales" no maneja solo un evento, maneja muchos. Por eso, crear cinco objetos es fundamental:
 
-## 3. Decisiones de Diseño
-- ¿Por qué elegí estos atributos? [Ej: Elegí un `String` para el ID de reserva porque contiene letras y números.]
-- ¿Qué validaciones implementé? [Ej: Se valida que el precio sea mayor a cero en el constructor.]
-- ¿Qué relaciones identifiqué? [Ej: Se implementó **Encapsulamiento** haciendo todos los atributos `private` y usando *getters* y *setters*.]
+* **Reutilización:** Demostramos que el molde `Event` es **eficiente**. No tuvimos que reescribir código cinco veces; solo lo usamos cinco veces.
+* **Independencia:** Cada uno de los cinco Objetos es una **entidad única**.  Si la Boda cambia de asistentes, el evento de la Cena de Gala no se entera ni se afecta. Esto asegura la **organización de los datos**.
 
-## 4. Dificultades Encontradas
-[Opcional: Describir un problema técnico o conceptual encontrado durante la implementación y cómo se resolvió.]
+## 3. Uso del Comportamiento (`mostrarInformacion()`)
+
+Después de crear cada Objeto, debemos verificar que están vivos y correctos.
+
+* **Acción:** Le pedimos a cada uno de los cinco Objetos que ejecute su propia acción: **`mostrarInformacion()`**.
+* **Resultado:** Esto confirma que el método es una **capacidad personal** de cada Objeto. La Boda solo muestra los datos de la Boda, y la Conferencia solo muestra sus propios datos. Esto prueba que la estructura que hicimos está funcionando correctamente.
