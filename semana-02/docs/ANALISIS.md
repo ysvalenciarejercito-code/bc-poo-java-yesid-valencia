@@ -1,28 +1,45 @@
-## 📝 3. Estructura del `ANALISIS.md` Semanal (`semana-XX/docs/ANALISIS.md`)
+# Actividad 2: Comparación de Paradigmas PE y POO
 
-Este es el documento donde explicas tu diseño de POO. **Recuerda que este contenido debe cambiar totalmente cada semana** para reflejar el nuevo problema.
+## Paradigmas de Programación
+Paradigma se refiere a como organizamos, estructuramos y escribimos el codigo en programacion.
 
-```markdown
-# Análisis del Dominio: [Tu Dominio]
+## 1. Programación Estructurada (PE)
 
-## 1. Identificación de Objetos
+### Concepto y Organización
 
-### Objeto Principal: [Nombre de la Clase Principal, e.g., Reserva]
-- **Justificación:** [Explicar por qué es la entidad central del problema (Dominio)]
-- **Atributos identificados:** [Listar los atributos privados necesarios y su tipo, e.g., `private String codigoReserva;`]
-- **Comportamientos:** [Listar los métodos públicos, e.g., `public void mostrarInformacion()`, `public double calcularPrecio()`]
+La Programación Estructurada se enfoca en la secuencia de pasos que se traducen como instrucciones y en el control del flujo del programa con base a dichas instrucciones.
 
-### Objeto Secundario: [Nombre de la Clase Secundaria, e.g., Cliente]
-- **Justificación:** [Explicar su rol de soporte o relación con el objeto principal]
-- **Relación con objeto principal:** [Describir cómo se relacionan (Asociación, Composición o Agregación) e.g., "Una `Reserva` está asociada a un `Cliente`."]
+* Su enfoque principal es el seguimiento de pasos.
+* Su organizar es dividir el codigo en bloques logicos llamados funciones.
+* Aca las variables y funciones existen en forma separada.
+* Utiliza estructuras de control básicas como `if` (condicionales), `while`/`for` (bucles).
+* A medida que el proyecto crece, es difícil manejar la interacción entre las funciones y los datos sueltos, lo que aumenta el riesgo de errores en la gestión de información.
 
-## 2. Diagrama de Clases (opcional)
-[Insertar diagrama UML de clases o una descripción textual clara de la herencia/relaciones]
+### Estructura en Código (Clase `EventPE.java`)
 
-## 3. Decisiones de Diseño
-- ¿Por qué elegí estos atributos? [Ej: Elegí un `String` para el ID de reserva porque contiene letras y números.]
-- ¿Qué validaciones implementé? [Ej: Se valida que el precio sea mayor a cero en el constructor.]
-- ¿Qué relaciones identifiqué? [Ej: Se implementó **Encapsulamiento** haciendo todos los atributos `private` y usando *getters* y *setters*.]
+En este paradigma, la información del Evento (`codigoEvento`, `asistentes`) y la acción (`mostrarInformacion()`) son independientes.
 
-## 4. Dificultades Encontradas
-[Opcional: Describir un problema técnico o conceptual encontrado durante la implementación y cómo se resolvió.]
+* En el `main`, llamamos a la acción (`EventPE.mostrarInfo()`) sin necesidad de crear un objeto. La función opera sobre las variables que están "flotando" en ese archivo debido a que no estan protegidas.
+
+---
+
+## 2. Programación Orientada a Objetos (POO)
+
+### Concepto y Organización
+
+La Programación Orientada a Objetos se enfoca en la creación de **entidades (Objetos)** que representan elementos del mundo real.
+
+* Se centra en quien es el objeto con base a la plantilla llamada Clase.
+* **Encapsulamiento:** Es uno de los pilares mas importantes de POO que es agrupar los atributos y metodos de una clase, tambien cambiando su control de acceso hacia todo el programa.
+* Si necesito un nuevo Evento, simplemente creo un nuevo Objeto de la Clase `Event`, sin reescribir la lógica lo que ocasiona que se reutiliza codigo.
+* **Ventaja Principal:** El encapsulamiento mejora la **seguridad** y la **modularidad**, haciendo que proyectos grandes sean más fáciles de mantener y modificar.
+
+### Estructura en Código (Clase `EventPOO.java`)
+
+En este paradigma, creamos la Clase `EventPOO` como una plantilla organizado.
+
+* **Implementación:** Usamos **Atributos** (`codigoEvento`, `asistentes`) y los unimos a un **Método** (`mostrarInformacionEvento()`) dentro de la misma Clase.
+* En el `main`, debemos crear una **instancia** (un Objeto) de la Clase, como `bodaClienteA`. Para que la Boda muestre sus datos, le pedimos directamente a bodaClienteA que ejecute su propia acción (`bodaClienteA.mostrarInfo()`).
+* **Ventaja:** Si creamos otro objeto (`fiestaCorporativa`), sus datos son **independientes**; un cambio en la Boda no afecta a la Fiesta Corporativa.
+
+---

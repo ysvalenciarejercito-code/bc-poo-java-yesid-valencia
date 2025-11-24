@@ -1,28 +1,30 @@
-## 📝 3. Estructura del `ANALISIS.md` Semanal (`semana-XX/docs/ANALISIS.md`)
+# Semana 02 - Comparacion de paradigmas PE y POO
 
-Este es el documento donde explicas tu diseño de POO. **Recuerda que este contenido debe cambiar totalmente cada semana** para reflejar el nuevo problema.
+## Descripción
 
-```markdown
-# Análisis del Dominio: [Tu Dominio]
+Esta semana se realizo la comparacion de los dos paradigmas con base a la segunda actividad del dominio **"Celebraciones Especiales"** (Empresa de Eventos). Se ha creado las primeras clases simples en Java como lo son (`EventPE`) y (`EventPOO`) para cumplir con los requisitos dados y demostrar las diferencias entre estos dos.
 
-## 1. Identificación de Objetos
+## Objetivos Cumplidos
 
-### Objeto Principal: [Nombre de la Clase Principal, e.g., Reserva]
-- **Justificación:** [Explicar por qué es la entidad central del problema (Dominio)]
-- **Atributos identificados:** [Listar los atributos privados necesarios y su tipo, e.g., `private String codigoReserva;`]
-- **Comportamientos:** [Listar los métodos públicos, e.g., `public void mostrarInformacion()`, `public double calcularPrecio()`]
+- [x] Identificar objetos del mundo real en el contexto del dominio. (**Actividad 1**)
+- [x] Comprender y comparar la Programación Estructurada y POO. (**Actividad 2**)
+- [ ] Implementar la clase principal del dominio (`Event.java`). (**Actividad 3**)
+- [ ] Crear múltiples objetos (`Event`) con datos coherentes. (**Actividad 4**)
+- [ ] Documentar el análisis de objetos en el dominio.
 
-### Objeto Secundario: [Nombre de la Clase Secundaria, e.g., Cliente]
-- **Justificación:** [Explicar su rol de soporte o relación con el objeto principal]
-- **Relación con objeto principal:** [Describir cómo se relacionan (Asociación, Composición o Agregación) e.g., "Una `Reserva` está asociada a un `Cliente`."]
+## Archivos Entregados
 
-## 2. Diagrama de Clases (opcional)
-[Insertar diagrama UML de clases o una descripción textual clara de la herencia/relaciones]
+- `README.md` - Introduccion a las actividades y objetivos de la semana.
+- `/docs` - carpeta que contiene el archivo ANALISIS.md
+- `docs/ANALISIS.md` - Archivo con la comparacion de los dos paradigmas.
+- `PEyPOO` - Carpeta que contiene todo el codigo Java y que se creo utilizando IntelliJ IDEA.
+- `PEyPOO/src` - Apartado que contiene todas las clases como lo son `Main`, `EventPOO` y `EventPE`. 
 
-## 3. Decisiones de Diseño
-- ¿Por qué elegí estos atributos? [Ej: Elegí un `String` para el ID de reserva porque contiene letras y números.]
-- ¿Qué validaciones implementé? [Ej: Se valida que el precio sea mayor a cero en el constructor.]
-- ¿Qué relaciones identifiqué? [Ej: Se implementó **Encapsulamiento** haciendo todos los atributos `private` y usando *getters* y *setters*.]
+## Instrucciones de Ejecución
 
-## 4. Dificultades Encontradas
-[Opcional: Describir un problema técnico o conceptual encontrado durante la implementación y cómo se resolvió.]
+La informaciòn importante en esta semana se encuentra en `PEyPOO/src` donde se compara los paradigmas con base a un objeto identificado del dominio **Celebraciones especiales** (empresa de eventos) requeridas en el documento de este mismo.
+
+```bash
+cd semana-01/src
+javac *.java
+java Main

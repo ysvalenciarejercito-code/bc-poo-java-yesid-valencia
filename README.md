@@ -1,20 +1,20 @@
-# Bootcamp POO Java - [Tu Nombre Completo]
+# Bootcamp POO Java - Yesid Valencia
 
-## 📋 Información
+## Información
 
 - **Estudiante:** Yesid Valencia
 -  **Ficha:** 3228970A
 - **Dominio Asignado:** Empresa de Eventos "Celebraciones Especiales"
 - **Instructor:** Erick Granados
 
-## 📁 Estructura del Repositorio
+## Estructura del Repositorio
 
 - `semana-01/`: Introducción a POO
 - `semana-02/`: Clases y Objetos
 - `semana-03/`: Encapsulación y Constructores
 - `semana-04/`: Herencia
 
-## 🚀 Cómo Ejecutar
+## Cómo Ejecutar
 
 ### Semana 01
 ```bash
